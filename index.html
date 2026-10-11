@@ -65,11 +65,16 @@
   .req { display:flex; gap:10px; flex-wrap:wrap; margin-top:12px; }
   .req span { background:var(--fondo); border:1px solid var(--linea); border-radius:999px; padding:4px 12px; font-size:.85rem; }
   code { font-size:.92em; }
+  [hidden] { display:none !important; }
+  .langsw { position:absolute; top:14px; right:16px; z-index:2; display:flex; border:1px solid rgba(255,255,255,.35); border-radius:999px; overflow:hidden; }
+  .langsw button { background:transparent; color:#fff; border:0; padding:5px 12px; font:600 .85rem/1 inherit; cursor:pointer; opacity:.75; }
+  .langsw button.on { background:rgba(255,255,255,.22); opacity:1; }
 </style>
 </head>
 <body>
 
 <header>
+  <nav class="langsw" aria-label="Idioma / Language"><button data-set="es">ES</button><button data-set="en">EN</button></nav>
   <svg class="traza" viewBox="0 0 520 160" aria-hidden="true">
     <g fill="#4FC3F7"><circle cx="10" cy="120" r="3"/><circle cx="40" cy="116" r="3"/><circle cx="70" cy="112" r="3"/><circle cx="100" cy="108" r="3"/><circle cx="130" cy="104" r="3"/><circle cx="160" cy="100" r="3"/><circle cx="190" cy="96" r="3"/><circle cx="220" cy="92" r="3"/><circle cx="250" cy="88" r="3"/><circle cx="280" cy="84" r="3"/><circle cx="310" cy="80" r="3"/><circle cx="340" cy="76" r="3"/><circle cx="370" cy="72" r="3"/><circle cx="400" cy="68" r="3"/><circle cx="430" cy="64" r="3"/><circle cx="460" cy="60" r="3"/><circle cx="490" cy="56" r="3"/></g>
     <g fill="#FFB74D"><circle cx="25" cy="132" r="3"/><circle cx="55" cy="128" r="3"/><circle cx="85" cy="124" r="3"/><circle cx="115" cy="120" r="3"/><circle cx="145" cy="116" r="3"/><circle cx="175" cy="112" r="3"/><circle cx="205" cy="108" r="3"/><circle cx="235" cy="104" r="3"/><circle cx="265" cy="100" r="3"/><circle cx="295" cy="96" r="3"/><circle cx="325" cy="92" r="3"/><circle cx="355" cy="88" r="3"/><circle cx="385" cy="84" r="3"/><circle cx="415" cy="80" r="3"/><circle cx="445" cy="76" r="3"/><circle cx="475" cy="72" r="3"/><circle cx="505" cy="68" r="3"/></g>
@@ -81,25 +86,44 @@
       <path d="M50 46V29M50 46l13 8" stroke="#fff" stroke-width="6" stroke-linecap="round"/>
       <g fill="#FFB74D"><circle cx="27" cy="84" r="3"/><circle cx="37" cy="82.5" r="3"/><circle cx="47" cy="81" r="3"/><circle cx="57" cy="79.5" r="3"/><circle cx="67" cy="78" r="3"/><circle cx="77" cy="76.5" r="3"/></g>
     </svg>
+<div data-lang="es">
     <div>
       <h1>TicTac <span>Grapher</span></h1>
       <p class="lead">Timegrapher acústico para Android: comprueba el estado de tu reloj mecánico escuchando su tictac con el micrófono del teléfono, y obtén un diagnóstico del mecanismo con informe en PDF.</p>
       <div class="botones">
         <a class="btn apk" href="https://github.com/manursan2026/tictac-grapher/releases/latest/download/TicTacGrapher.apk" download>
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 9.48l1.84-3.18c.16-.31.04-.69-.26-.85-.29-.15-.65-.06-.83.22l-1.88 3.24a11.4 11.4 0 0 0-8.94 0L5.65 5.67a.63.63 0 0 0-.87-.2c-.28.18-.37.54-.22.83L6.4 9.48A10.8 10.8 0 0 0 1 18h22a10.8 10.8 0 0 0-5.4-8.52zM7 15.25a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5zm10 0a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5z"/></svg>
-          <span>Descargar APK<small>Android 10 o superior · 65 KB</small></span>
+          <span>Descargar APK<small>Android 10 o superior · 76 KB</small></span>
         </a>
         <a class="btn pdf" href="https://github.com/manursan2026/tictac-grapher/releases/latest/download/Manual-TicTacGrapher.pdf" download>
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm-1 7V3.5L18.5 9H13zM8 13h8v2H8v-2zm0 4h8v2H8v-2z"/></svg>
-          <span>Manual de usuario<small>PDF · 24 páginas · 2.0 MB</small></span>
+          <span>Manual de usuario<small>PDF · 24 páginas · 1.9 MB</small></span>
         </a>
       </div>
     </div>
+</div>
+<div data-lang="en" hidden>
+    <div>
+      <h1>TicTac <span>Grapher</span></h1>
+      <p class="lead">Acoustic timegrapher for Android: check the condition of your mechanical watch by listening to its ticking with the phone's microphone, and get a diagnosis of the movement with a PDF report.</p>
+      <div class="botones">
+        <a class="btn apk" href="https://github.com/manursan2026/tictac-grapher/releases/latest/download/TicTacGrapher.apk" download>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 9.48l1.84-3.18c.16-.31.04-.69-.26-.85-.29-.15-.65-.06-.83.22l-1.88 3.24a11.4 11.4 0 0 0-8.94 0L5.65 5.67a.63.63 0 0 0-.87-.2c-.28.18-.37.54-.22.83L6.4 9.48A10.8 10.8 0 0 0 1 18h22a10.8 10.8 0 0 0-5.4-8.52zM7 15.25a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5zm10 0a1.25 1.25 0 1 1 0-2.5 1.25 1.25 0 0 1 0 2.5z"/></svg>
+          <span>Download APK<small>Android 10 or later · 76 KB</small></span>
+        </a>
+        <a class="btn pdf" href="https://github.com/manursan2026/tictac-grapher/releases/latest/download/Manual-TicTacGrapher-EN.pdf" download>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm-1 7V3.5L18.5 9H13zM8 13h8v2H8v-2zm0 4h8v2H8v-2z"/></svg>
+          <span>User manual<small>PDF · 24 pages · 2.0 MB</small></span>
+        </a>
+      </div>
+    </div>
+</div>
   </div>
 </header>
 
 <main>
 <div class="wrap">
+<div data-lang="es">
 
 <section id="que-es">
   <h2><span style="background:var(--azul)"></span>¿Qué es TicTac Grapher?</h2>
@@ -142,6 +166,7 @@
     <div class="card"><h3><i style="background:#F4511E">🎚️</i>Ajustes finos</h3><p>Frecuencia automática o manual, filtro, ventana de promedio, corrección de marcha del teléfono y congelado de la lectura.</p></div>
     <div class="card"><h3><i style="background:#8E24AA">🎧</i>Grabación de diagnóstico</h3><p>Graba 20 segundos del sonido del reloj en WAV para analizarlo con detalle, y lo guarda en <em>Descargas/TicTac</em>.</p></div>
     <div class="card"><h3><i style="background:#546E7A">🧪</i>Modo Demo</h3><p>Simula un reloj con valores conocidos para probar la app sin necesidad de tener uno a mano.</p></div>
+    <div class="card"><h3><i style="background:#1E88E5">🌐</i>Español e inglés</h3><p>La app, los informes y el manual están en los dos idiomas. Sigue el idioma del teléfono y se puede cambiar en Ajustes.</p></div>
     <div class="card"><h3><i style="background:#00897B">🔒</i>Privada y sin conexión</h3><p>El sonido se analiza solo en el teléfono. La app no necesita Internet, no tiene cuentas ni anuncios, y solo pide permiso para el micrófono.</p></div>
   </div>
 </section>
@@ -169,7 +194,7 @@
   <div class="nota" style="margin-top:16px">Si Play Protect muestra un aviso, elige <em>Instalar de todos modos</em>. La app no requiere cuenta ni contiene anuncios.</div>
   <div class="nota" style="margin-top:12px">El diagnóstico es <strong>orientativo</strong>: se basa en la medición acústica con el micrófono del teléfono y su exactitud depende del micrófono, del reloj interno del teléfono y del ruido ambiente. No sustituye la revisión de un relojero.</div>
   <div class="req">
-    <span>Android 10+</span><span>Versión 1.5</span><span>Sin anuncios</span><span>Sin conexión a Internet</span><span>El audio no sale del teléfono</span>
+    <span>Android 10+</span><span>Versión 1.6</span><span>Sin anuncios</span><span>Sin conexión a Internet</span><span>Español e inglés</span><span>El audio no sale del teléfono</span>
   </div>
 </section>
 
@@ -179,23 +204,144 @@
   <div class="dl">
     <div class="card">
       <h3><i style="background:var(--ambar);color:#1F2937">📱</i>Aplicación Android</h3>
-      <p>Fichero de instalación <code>TicTacGrapher.apk</code> · versión 1.5 · 65 KB</p>
+      <p>Fichero de instalación <code>TicTacGrapher.apk</code> · versión 1.6 · 76 KB</p>
       <a class="btn apk" href="https://github.com/manursan2026/tictac-grapher/releases/latest/download/TicTacGrapher.apk" download>Descargar APK</a>
     </div>
     <div class="card">
       <h3><i style="background:var(--azul)">📘</i>Manual de usuario</h3>
-      <p>Guía completa con capturas, diagnóstico, solución de problemas y un anexo sobre cómo funciona el escape · PDF · 2.0 MB</p>
+      <p>Guía completa con capturas, diagnóstico, solución de problemas y un anexo sobre cómo funciona el escape · PDF · 1.9 MB</p>
       <a class="btn pdf" href="https://github.com/manursan2026/tictac-grapher/releases/latest/download/Manual-TicTacGrapher.pdf" download>Descargar manual (PDF)</a>
     </div>
   </div>
 </section>
 
 </div>
+<div data-lang="en" hidden>
+
+<section id="what-is">
+  <h2><span style="background:var(--azul)"></span>What is TicTac Grapher?</h2>
+  <p class="sub">A watch timing machine in your pocket: no accounts, no ads and no Internet connection.</p>
+  <p>Watchmakers use a <strong>timegrapher</strong> to find out how a mechanical watch is doing without opening it: it listens to the ticking of the escapement and, from the exact moment of each sound, works out whether the watch is gaining or losing, how much energy the balance swings with and whether it is in beat.</p>
+  <p><strong>TicTac Grapher</strong> does the same with your phone's microphone. Rest the watch on the microphone, tap <em>Measure</em> and, in about 15–30 seconds, the measurement stops by itself and shows the results with a <strong>diagnosis of the movement's condition</strong>: whether it is in good shape, needs regulating, might be magnetized or should go in for a service.</p>
+  <div class="medidas">
+    <div class="medida"><b>Rate</b><em>s/d</em><p>Seconds gained or lost per day.</p></div>
+    <div class="medida"><b>Amplitude</b><em>degrees</em><p>How far the balance swings: energy, lubrication and wear.</p></div>
+    <div class="medida"><b>Beat error</b><em>ms</em><p>Asymmetry between tick and tock.</p></div>
+    <div class="medida"><b>Frequency</b><em>bph</em><p>Beats per hour, detected automatically (12000–43200).</p></div>
+  </div>
+</section>
+
+<section id="screenshots">
+  <h2><span style="background:var(--cian)"></span>What it looks like</h2>
+  <p class="sub">Screenshots of the app in Demo mode (simulated watch).</p>
+  <div class="shots">
+    <figure><img src="img/en/medicion.jpg" alt="Measuring screen with rate, amplitude, beat error and trace" loading="lazy"><figcaption>Measurement and trace</figcaption></figure>
+    <figure><img src="img/en/diagnostico.jpg" alt="Diagnosis card" loading="lazy"><figcaption>Diagnosis at the end</figcaption></figure>
+    <figure><img src="img/en/informe.jpg" alt="PDF report" loading="lazy"><figcaption>PDF report</figcaption></figure>
+    <figure><img src="img/en/forma-onda.jpg" alt="Average waveform and trend" loading="lazy"><figcaption>Escapement waveform</figcaption></figure>
+    <figure><img src="img/en/posiciones.jpg" alt="Measurements in several positions" loading="lazy"><figcaption>Measuring by position</figcaption></figure>
+    <figure><img src="img/en/guia.jpg" alt="Built-in guide on how to measure" loading="lazy"><figcaption>Measurement guide</figcaption></figure>
+  </div>
+</section>
+
+<section id="features">
+  <h2><span style="background:var(--ambar)"></span>Main features</h2>
+  <p class="sub">Everything the app does, in a nutshell.</p>
+  <div class="grid">
+    <div class="card"><h3><i style="background:var(--azul)">🎙️</i>Measuring with the microphone</h3><p>Analyses the sound of the escapement with filtering tuned to the watch's metallic "clicks". It ignores voices, hum and the noise of placing the watch.</p></div>
+    <div class="card"><h3><i style="background:var(--verde)">⏹️</i>Automatic stop</h3><p>The measurement ends by itself when the reading is stable and the phone vibrates. If it does not stabilize, it warns that the result is unreliable.</p></div>
+    <div class="card"><h3><i style="background:var(--rojo)">🩺</i>Movement diagnosis</h3><p>Overall verdict (good condition, needs adjusting, low amplitude, magnetized, needs servicing…) with an explanation of each parameter and what to do.</p></div>
+    <div class="card"><h3><i style="background:#43A047">📄</i>PDF report to share</h3><p>One-page report with the diagnosis, the values, the positions and the charts. Share it with one tap via WhatsApp, email or Drive, or print it.</p></div>
+    <div class="card"><h3><i style="background:var(--morado)">📈</i>Paper-tape trace</h3><p>One dot per beat, as on classic timegraphers: the slope shows whether it gains or loses and the gap between tick and tock, the beat error.</p></div>
+    <div class="card"><h3><i style="background:#0097A7">〰️</i>Escapement waveform</h3><p>Shows the three sounds of each beat (unlocking, impulse and drop) and the lift time used to calculate the amplitude.</p></div>
+    <div class="card"><h3><i style="background:var(--oro)">🧭</i>Six positions</h3><p>Save the measurement dial up, dial down and in the four vertical positions. It calculates the average rate, the difference between positions and the amplitude drop.</p></div>
+    <div class="card"><h3><i style="background:#3949AB">📘</i>Built-in guide</h3><p>Explains step by step how to place the watch, which lift angle to use and how to identify the calibre if you don't know it.</p></div>
+    <div class="card"><h3><i style="background:#F4511E">🎚️</i>Fine settings</h3><p>Automatic or manual frequency, filter, averaging window, phone rate correction and reading freeze.</p></div>
+    <div class="card"><h3><i style="background:#8E24AA">🎧</i>Diagnostic recording</h3><p>Records 20 seconds of the watch's sound as a WAV file for detailed analysis and saves it in <em>Downloads/TicTac</em>.</p></div>
+    <div class="card"><h3><i style="background:#546E7A">🧪</i>Demo mode</h3><p>Simulates a watch with known values so you can try the app without having one to hand.</p></div>
+    <div class="card"><h3><i style="background:#1E88E5">🌐</i>English and Spanish</h3><p>The app, the reports and the manual are available in both languages. It follows the phone's language and can be changed in Settings.</p></div>
+    <div class="card"><h3><i style="background:#00897B">🔒</i>Private and offline</h3><p>The sound is analysed only on the phone. The app needs no Internet, has no accounts or ads, and only asks for microphone permission.</p></div>
+  </div>
+</section>
+
+<section id="how-to-measure">
+  <h2><span style="background:var(--verde)"></span>How to measure</h2>
+  <p class="sub">Four steps. The manual and the in-app guide explain them in detail.</p>
+  <ol class="pasos">
+    <li><strong>Wind</strong> the watch fully and let it run for a few minutes.</li>
+    <li>Put the phone on a <strong>cloth</strong>, somewhere quiet, and rest the watch's <strong>metal case</strong> against the microphone hole (usually on the bottom edge).</li>
+    <li>Tap <strong>Measure</strong> and don't touch anything. The measurement stops by itself when the reading is stable.</li>
+    <li>Read the <strong>diagnosis</strong> and, if you like, <strong>share the PDF report</strong> via WhatsApp or email. Repeat in other positions for a complete diagnosis.</li>
+  </ol>
+</section>
+
+<section id="install">
+  <h2><span style="background:var(--rojo)"></span>How to install the APK</h2>
+  <p class="sub">The app is not on Google Play, so it is installed directly from the file.</p>
+  <ol class="pasos">
+    <li>From your Android phone's browser, tap <strong>Download APK</strong> and save the file <code>TicTacGrapher.apk</code>.</li>
+    <li>Open the downloaded file (from the download notification or with the <em>Files</em> app).</li>
+    <li>If Android asks, allow <strong>installing apps from this source</strong> (browser or file manager). This is a standard question for any app outside Google Play.</li>
+    <li>Tap <strong>Install</strong>. The first time you tap <em>Measure</em>, grant the microphone permission. New versions install over the old one without losing your settings.</li>
+  </ol>
+  <div class="nota" style="margin-top:16px">If Play Protect shows a warning, choose <em>Install anyway</em>. The app requires no account and contains no ads.</div>
+  <div class="nota" style="margin-top:12px">The diagnosis is <strong>indicative</strong>: it is based on acoustic measurement with the phone's microphone, and its accuracy depends on the microphone, the phone's internal clock and ambient noise. It does not replace a check by a watchmaker.</div>
+  <div class="req">
+    <span>Android 10+</span><span>Version 1.6</span><span>No ads</span><span>No Internet connection</span><span>English and Spanish</span><span>Audio never leaves the phone</span>
+  </div>
+</section>
+
+<section id="downloads">
+  <h2><span style="background:var(--morado)"></span>Downloads</h2>
+  <p class="sub">Both files download from this page.</p>
+  <div class="dl">
+    <div class="card">
+      <h3><i style="background:var(--ambar);color:#1F2937">📱</i>Android app</h3>
+      <p>Installation file <code>TicTacGrapher.apk</code> · version 1.6 · 76 KB</p>
+      <a class="btn apk" href="https://github.com/manursan2026/tictac-grapher/releases/latest/download/TicTacGrapher.apk" download>Download APK</a>
+    </div>
+    <div class="card">
+      <h3><i style="background:var(--azul)">📘</i>User manual</h3>
+      <p>Complete guide with screenshots, diagnosis, troubleshooting and an appendix on how the escapement works · PDF · 2.0 MB</p>
+      <a class="btn pdf" href="https://github.com/manursan2026/tictac-grapher/releases/latest/download/Manual-TicTacGrapher-EN.pdf" download>Download manual (PDF)</a>
+    </div>
+  </div>
+</section>
+
+</div>
+</div>
 </main>
 
 <footer>
-  <div class="wrap">TicTac Grapher · versión 1.5 · Página actualizada el 28/09/2026.<br>Las capturas muestran el modo Demo con un reloj simulado.<br><a href="https://github.com/manursan2026/tictac-grapher/releases">Todas las versiones</a></div>
+<div data-lang="es">
+  <div class="wrap">TicTac Grapher · versión 1.6 · Página actualizada el 11/10/2026.<br>Las capturas muestran el modo Demo con un reloj simulado.<br><a href="https://github.com/manursan2026/tictac-grapher/releases">Todas las versiones</a></div>
+</div>
+<div data-lang="en" hidden>
+  <div class="wrap">TicTac Grapher · version 1.6 · Page updated 11/10/2026.<br>The screenshots show Demo mode with a simulated watch.<br><a href="https://github.com/manursan2026/tictac-grapher/releases">All versions</a></div>
+</div>
 </footer>
 
+<script>
+(function () {
+  var META = {
+    es: { title: 'TicTac Grapher · App Android', desc: 'Timegrapher acústico para Android: mide la marcha, la amplitud, el error de latido y la frecuencia de un reloj mecánico con el micrófono del teléfono, y da un diagnóstico del mecanismo con informe en PDF.' },
+    en: { title: 'TicTac Grapher · Android app', desc: 'Acoustic timegrapher for Android: measures the rate, amplitude, beat error and frequency of a mechanical watch with the phone\'s microphone, and gives a diagnosis of the movement with a PDF report.' }
+  };
+  function saved() { try { return localStorage.getItem('tt.lang'); } catch (e) { return null; } }
+  function device() { var l = ((navigator.languages && navigator.languages[0]) || navigator.language || 'en').toLowerCase(); return l.indexOf('es') === 0 ? 'es' : 'en'; }
+  function apply(lang) {
+    document.documentElement.lang = lang;
+    document.querySelectorAll('[data-lang]').forEach(function (el) { el.hidden = el.getAttribute('data-lang') !== lang; });
+    document.querySelectorAll('.langsw button').forEach(function (b) { b.classList.toggle('on', b.getAttribute('data-set') === lang); });
+    document.title = META[lang].title;
+    var m = document.querySelector('meta[name="description"]'); if (m) m.setAttribute('content', META[lang].desc);
+  }
+  var q = new URLSearchParams(location.search).get('lang');
+  apply(q === 'es' || q === 'en' ? q : (saved() || device()));
+  document.querySelectorAll('.langsw button').forEach(function (b) {
+    b.addEventListener('click', function () { var l = b.getAttribute('data-set'); try { localStorage.setItem('tt.lang', l); } catch (e) {} apply(l); });
+  });
+})();
+</script>
 </body>
 </html>
