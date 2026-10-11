@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Política de privacidad · TicTac Grapher</title>
+<meta name="description" content="Política de privacidad de la aplicación TicTac Grapher para Android · Privacy policy of the TicTac Grapher Android app.">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<style>
+  :root { --azul:#0B7FB3; --cian:#4FC3F7; --verde:#2F8F46; --texto:#1F2937; --gris:#6B7280; --fondo:#F5F7FB; --tarjeta:#FFFFFF; --linea:#E5E7EB; }
+  @media (prefers-color-scheme: dark) { :root { --texto:#F3F4F6; --gris:#9CA3AF; --fondo:#0D1014; --tarjeta:#161B21; --linea:#262E37; } }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; color:var(--texto); background:var(--fondo); line-height:1.6; }
+  a { color:var(--azul); }
+  @media (prefers-color-scheme: dark) { a { color:var(--cian); } }
+  .wrap { max-width:860px; margin:0 auto; padding:0 20px; }
+  header { background:linear-gradient(135deg,#0D1014 0%,#123247 55%,#0B7FB3 100%); color:#fff; padding:40px 0 34px; position:relative; }
+  header h1 { margin:6px 0 4px; font-size:2.1rem; }
+  header .lead { margin:0; opacity:.9; }
+  .nav-back { color:#cfe8f5; text-decoration:none; font-size:.95rem; }
+  .langsw { position:absolute; top:14px; right:16px; display:flex; border:1px solid rgba(255,255,255,.35); border-radius:999px; overflow:hidden; }
+  .langsw button { background:transparent; color:#fff; border:0; padding:5px 12px; font:600 .85rem/1 inherit; cursor:pointer; opacity:.75; }
+  .langsw button.on { background:rgba(255,255,255,.22); opacity:1; }
+  main { padding:26px 20px 10px; }
+  .badge { background:rgba(47,143,70,.12); border:1px solid rgba(47,143,70,.35); color:var(--verde); border-radius:12px; padding:12px 16px; font-weight:600; margin-bottom:18px; }
+  .card { background:var(--tarjeta); border:1px solid var(--linea); border-radius:16px; padding:18px 22px; margin-bottom:16px; }
+  .card h2 { font-size:1.2rem; margin:0 0 8px; display:flex; align-items:center; gap:10px; }
+  .card h2 span { width:8px; height:22px; border-radius:4px; background:var(--azul); display:inline-block; }
+  .card p, .card li { color:var(--texto); }
+  .card ul { padding-left:20px; margin:6px 0; }
+  code { font-size:.9em; background:rgba(127,127,127,.15); padding:0 4px; border-radius:4px; }
+  .dev { display:flex; align-items:center; gap:14px; flex-wrap:wrap; }
+  .dev .logo { background:#f6f7f9; border-radius:10px; padding:6px 10px; display:inline-block; }
+  .dev .logo img { height:40px; display:block; }
+  footer { padding:24px 0 40px; color:var(--gris); font-size:.9rem; text-align:center; }
+  footer .logo { background:#f6f7f9; border-radius:10px; padding:6px 10px; display:inline-block; margin-bottom:8px; }
+  footer .logo img { height:34px; display:block; }
+  [hidden] { display:none !important; }
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="langsw" aria-label="Idioma / Language"><button data-set="es">ES</button><button data-set="en">EN</button></nav>
+  <div class="wrap">
+    <div data-lang="es">
+      <a href="index.html" class="nav-back">← Volver a TicTac Grapher</a>
+      <h1>Política de privacidad</h1>
+      <p class="lead">Aplicación Android TicTac Grapher · Última actualización: octubre de 2026</p>
+    </div>
+    <div data-lang="en" hidden>
+      <a href="index.html?lang=en" class="nav-back">← Back to TicTac Grapher</a>
+      <h1>Privacy policy</h1>
+      <p class="lead">TicTac Grapher Android app · Last updated: October 2026</p>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+<div data-lang="es">
+  <div class="badge">✓ Sin publicidad · Sin cuentas ni registro · Sin conexión a Internet · El sonido no sale del teléfono</div>
+
+  <div class="card">
+    <h2><span></span>1. Responsable y compromiso de privacidad</h2>
+    <div class="dev"><div class="logo"><img src="logo_jmrsoft.webp" alt="JMRSoft"></div><p style="margin:0">TicTac Grapher está desarrollada por <strong>JMRSoft</strong>.</p></div>
+    <p>La aplicación está diseñada según el principio de privacidad desde el diseño. <strong>No recopilamos, no almacenamos en servidores ni transferimos a terceros ningún dato personal ni de uso de la aplicación.</strong> No hace falta crear una cuenta ni facilitar ningún dato para usar todas sus funciones.</p>
+  </div>
+
+  <div class="card">
+    <h2><span></span>2. Micrófono y audio</h2>
+    <p>La función principal de la app es escuchar el tictac de un reloj mecánico. Para ello utiliza el micrófono del teléfono, solo mientras el usuario está midiendo (después de pulsar <em>Medir</em>):</p>
+    <ul>
+      <li>El sonido se analiza <strong>en tiempo real, en la memoria del propio teléfono</strong>, para calcular la marcha, la amplitud y el error de latido.</li>
+      <li>El audio <strong>no se graba, no se guarda y no se envía</strong> a ningún sitio. Al detener la medición se descarta.</li>
+      <li>La única excepción es la función opcional <em>Grabar 20 s de audio</em>: solo si el usuario la pulsa, se guarda un archivo WAV en la carpeta <code>Descargas/TicTac</code> del propio teléfono, y solo se comparte si el usuario elige hacerlo desde el menú de compartir de Android.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2><span></span>3. Datos guardados en el teléfono</h2>
+    <p>La app guarda en el almacenamiento privado del dispositivo, sin enviarlos a ningún servidor:</p>
+    <ul>
+      <li><strong>Ajustes:</strong> idioma, ángulo de levantamiento, frecuencia, filtro, ventana de promedio y demás opciones.</li>
+      <li><strong>Mediciones guardadas por posición</strong> (marcha, amplitud, error de latido) y el <strong>nombre del reloj</strong> que el usuario escriba opcionalmente.</li>
+    </ul>
+    <p>Estos datos se eliminan al desinstalar la aplicación. Si el usuario tiene activada la copia de seguridad de Android en su cuenta de Google, el sistema puede incluirlos en esa copia cifrada, según las condiciones de la cuenta del usuario.</p>
+  </div>
+
+  <div class="card">
+    <h2><span></span>4. Informes PDF</h2>
+    <p>Los informes de diagnóstico se generan en el propio teléfono. Al pulsar <em>Compartir informe</em> se guarda una copia en <code>Descargas/TicTac</code> y se abre el menú de compartir de Android: el informe solo se envía a la aplicación y al destinatario que el usuario elija (por ejemplo, WhatsApp o el correo). A partir de ese momento se aplica la política de privacidad de la aplicación elegida.</p>
+  </div>
+
+  <div class="card">
+    <h2><span></span>5. Permisos del dispositivo</h2>
+    <ul>
+      <li><strong>Micrófono</strong> (<code>RECORD_AUDIO</code>): para escuchar el reloj durante la medición, como se describe en el punto 2.</li>
+      <li><strong>Ajustes de audio</strong> (<code>MODIFY_AUDIO_SETTINGS</code>): para configurar la captura de sonido sin procesados que alteren el tictac.</li>
+      <li><strong>Vibración</strong> (<code>VIBRATE</code>): para avisar al terminar una medición.</li>
+    </ul>
+    <p>La aplicación <strong>no tiene permiso de acceso a Internet</strong>, por lo que no puede enviar datos a ningún servidor. Los enlaces al manual, a la página web y a esta política se abren en el navegador del teléfono.</p>
+  </div>
+
+  <div class="card">
+    <h2><span></span>6. Publicidad, analítica y terceros</h2>
+    <ul>
+      <li><strong>No contiene publicidad</strong> ni utiliza el ID de publicidad de Google.</li>
+      <li><strong>No incluye SDK de analítica ni de rastreo</strong> de terceros.</li>
+      <li><strong>No comparte ni vende información</strong> a terceros.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2><span></span>7. Menores</h2>
+    <p>La aplicación no está dirigida a menores de 13 años y no recopila datos de ningún usuario, tampoco de menores.</p>
+  </div>
+
+  <div class="card">
+    <h2><span></span>8. Cambios y contacto</h2>
+    <p>Si esta política cambia, se publicará aquí la nueva versión con su fecha de actualización. Para cualquier consulta sobre la privacidad o la aplicación, puedes contactar a través de la página del proyecto:</p>
+    <p><a href="https://github.com/manursan2026/tictac-grapher/issues" target="_blank" rel="noopener">https://github.com/manursan2026/tictac-grapher/issues</a></p>
+  </div>
+</div>
+
+<div data-lang="en" hidden>
+  <div class="badge">✓ No ads · No accounts or sign-up · No Internet connection · Sound never leaves the phone</div>
+
+  <div class="card">
+    <h2><span></span>1. Developer and privacy commitment</h2>
+    <div class="dev"><div class="logo"><img src="logo_jmrsoft.webp" alt="JMRSoft"></div><p style="margin:0">TicTac Grapher is developed by <strong>JMRSoft</strong>.</p></div>
+    <p>The app follows the privacy-by-design principle. <strong>We do not collect, store on servers or transfer to third parties any personal data or app usage data.</strong> You do not need to create an account or provide any information to use all of its features.</p>
+  </div>
+
+  <div class="card">
+    <h2><span></span>2. Microphone and audio</h2>
+    <p>The app's main function is to listen to the ticking of a mechanical watch. To do so it uses the phone's microphone, only while the user is measuring (after tapping <em>Measure</em>):</p>
+    <ul>
+      <li>The sound is analysed <strong>in real time, in the phone's own memory</strong>, to calculate the rate, amplitude and beat error.</li>
+      <li>The audio is <strong>not recorded, not stored and not sent</strong> anywhere. It is discarded when the measurement stops.</li>
+      <li>The only exception is the optional <em>Record 20 s of audio</em> feature: only if the user taps it, a WAV file is saved in the phone's <code>Downloads/TicTac</code> folder, and it is only shared if the user chooses to do so from the Android share menu.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2><span></span>3. Data stored on the phone</h2>
+    <p>The app stores the following in the device's private storage, without sending it to any server:</p>
+    <ul>
+      <li><strong>Settings:</strong> language, lift angle, frequency, filter, averaging window and other options.</li>
+      <li><strong>Measurements saved by position</strong> (rate, amplitude, beat error) and the <strong>watch name</strong> the user may optionally type.</li>
+    </ul>
+    <p>This data is deleted when the app is uninstalled. If the user has Android backup enabled in their Google account, the system may include it in that encrypted backup, under the terms of the user's account.</p>
+  </div>
+
+  <div class="card">
+    <h2><span></span>4. PDF reports</h2>
+    <p>Diagnosis reports are generated on the phone itself. When the user taps <em>Share report</em>, a copy is saved in <code>Downloads/TicTac</code> and the Android share menu opens: the report is only sent to the app and recipient the user chooses (for example WhatsApp or email). From then on, the privacy policy of the chosen app applies.</p>
+  </div>
+
+  <div class="card">
+    <h2><span></span>5. Device permissions</h2>
+    <ul>
+      <li><strong>Microphone</strong> (<code>RECORD_AUDIO</code>): to listen to the watch during the measurement, as described in section 2.</li>
+      <li><strong>Audio settings</strong> (<code>MODIFY_AUDIO_SETTINGS</code>): to configure sound capture without processing that would alter the ticking.</li>
+      <li><strong>Vibration</strong> (<code>VIBRATE</code>): to signal the end of a measurement.</li>
+    </ul>
+    <p>The app <strong>has no Internet access permission</strong>, so it cannot send data to any server. Links to the manual, the website and this policy open in the phone's browser.</p>
+  </div>
+
+  <div class="card">
+    <h2><span></span>6. Advertising, analytics and third parties</h2>
+    <ul>
+      <li><strong>No advertising</strong>, and the Google advertising ID is not used.</li>
+      <li><strong>No third-party analytics or tracking SDKs.</strong></li>
+      <li><strong>No information is shared with or sold</strong> to third parties.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2><span></span>7. Children</h2>
+    <p>The app is not directed at children under 13 and does not collect data from any user, children included.</p>
+  </div>
+
+  <div class="card">
+    <h2><span></span>8. Changes and contact</h2>
+    <p>If this policy changes, the new version will be published here with its update date. For any question about privacy or the app, you can get in touch through the project page:</p>
+    <p><a href="https://github.com/manursan2026/tictac-grapher/issues" target="_blank" rel="noopener">https://github.com/manursan2026/tictac-grapher/issues</a></p>
+  </div>
+</div>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="logo"><img src="logo_jmrsoft.webp" alt="JMRSoft"></div><br>
+    <span data-lang="es">TicTac Grapher · Desarrollada por JMRSoft · <a href="index.html">Página principal</a></span>
+    <span data-lang="en" hidden>TicTac Grapher · Developed by JMRSoft · <a href="index.html?lang=en">Home page</a></span>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var T = { es: 'Política de privacidad · TicTac Grapher', en: 'Privacy policy · TicTac Grapher' };
+  function saved() { try { return localStorage.getItem('tt.lang'); } catch (e) { return null; } }
+  function device() { var l = ((navigator.languages && navigator.languages[0]) || navigator.language || 'en').toLowerCase(); return l.indexOf('es') === 0 ? 'es' : 'en'; }
+  function apply(lang) {
+    document.documentElement.lang = lang; document.title = T[lang];
+    document.querySelectorAll('[data-lang]').forEach(function (el) { el.hidden = el.getAttribute('data-lang') !== lang; });
+    document.querySelectorAll('.langsw button').forEach(function (b) { b.classList.toggle('on', b.getAttribute('data-set') === lang); });
+  }
+  var q = new URLSearchParams(location.search).get('lang');
+  apply(q === 'es' || q === 'en' ? q : (saved() || device()));
+  document.querySelectorAll('.langsw button').forEach(function (b) {
+    b.addEventListener('click', function () { var l = b.getAttribute('data-set'); try { localStorage.setItem('tt.lang', l); } catch (e) {} apply(l); });
+  });
+})();
+</script>
+</body>
+</html>
